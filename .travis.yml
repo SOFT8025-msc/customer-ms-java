@@ -10,4 +10,3 @@ deploy:
   app: customer-ms-java
   on:
     repo: SOFT8025-msc/customer-ms-java
-

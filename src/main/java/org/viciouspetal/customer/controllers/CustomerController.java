@@ -28,4 +28,9 @@ public class CustomerController {
     public Customer update(@RequestParam String id, @RequestBody Customer object) {
         return customerService.update(object);
     }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    public void delete(@RequestParam String id) {
+        customerService.delete(id);
+    }
 }

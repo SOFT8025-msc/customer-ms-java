@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
@@ -15,6 +16,7 @@ public class Customer implements BaseObject{
     private String id;
     private String firstName;
     private String lastName;
+    @OneToMany
     private List<ShippingAddress> shippingAddresses;
     private String title;
 

@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.viciouspetal.customer.model.Customer;
 import org.viciouspetal.customer.model.ShippingAddress;
@@ -52,14 +53,7 @@ public class CustomerServiceImplTest {
         assertThat(capturedCustomer.getTitle(), is(toBeCreated.getTitle()));
     }
 
-    private Customer getDefaultCustomer() {
-        Customer toBeCreated = new Customer();
-        toBeCreated.setFirstName("Darth");
-        toBeCreated.setLastName("Vader");
-        toBeCreated.setTitle("Lord");
-        toBeCreated.setShippingAddresses(Collections.singletonList(new ShippingAddress()));
-        return toBeCreated;
-    }
+
 
     @Test
     public void update_when_customerExists_Then_customerIsUpdated() {
@@ -106,6 +100,58 @@ public class CustomerServiceImplTest {
         assertThat(result.get(1).getFirstName(), is(getDefaultCustomer().getFirstName()));
         assertThat(result.get(1).getLastName(), is(getDefaultCustomer().getLastName()));
         assertThat(result.get(1).getTitle(), is(getDefaultCustomer().getTitle()));
+    }
 
+    @Test
+    public void delete_when_idToBeDeletedExists_then_customerForThatIdIsDeleted() {
+        // Arrange
+        Customer toBeDeleted = getDefaultCustomer();
+        toBeDeleted.setId(UUID.randomUUID().toString());
+        when(customerRepositoryMock.getOne(toBeDeleted.getId())).thenReturn(toBeDeleted);
+
+        // Act
+        customerService.delete(toBeDeleted.getId());
+
+        // Assert
+        verify(customerRepositoryMock).getOne(toBeDeleted.getId());
+        verify(customerRepositoryMock).delete(toBeDeleted);
+    }
+
+    @Test
+    public void delete_when_idToBeDeletedDoesntExist_then_noBrandIsDeleted() {
+        when(customerRepositoryMock.getOne("id")).thenReturn(null);
+
+        customerService.delete("id");
+
+        verify(customerRepositoryMock).getOne("id");
+        verify(customerRepositoryMock, never()).delete(Mockito.any(Customer.class));
+    }
+
+    @Test
+    public void delete_when_CustomerToBeDeletedExists_then_customerIsDeleted(){
+        // Arrange
+        Customer toBeDeleted = getDefaultCustomer();
+
+        // Act
+        customerService.delete(toBeDeleted);
+
+        // Assert
+        ArgumentCaptor<Customer> customerArgumentCaptor = ArgumentCaptor.forClass(Customer.class);
+        verify(customerRepositoryMock).delete(customerArgumentCaptor.capture());
+        Customer capturedCustomer = customerArgumentCaptor.getValue();
+        assertThat(capturedCustomer.getFirstName(), is(toBeDeleted.getFirstName()));
+        assertThat(capturedCustomer.getLastName(), is(toBeDeleted.getLastName()));
+        assertThat(capturedCustomer.getTitle(), is(toBeDeleted.getTitle()));
+
+        verify(customerRepositoryMock).delete(toBeDeleted);
+    }
+
+    private Customer getDefaultCustomer() {
+        Customer toBeCreated = new Customer();
+        toBeCreated.setFirstName("Darth");
+        toBeCreated.setLastName("Vader");
+        toBeCreated.setTitle("Lord");
+        toBeCreated.setShippingAddresses(Collections.singletonList(new ShippingAddress()));
+        return toBeCreated;
     }
 }
