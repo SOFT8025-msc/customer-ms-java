@@ -14,21 +14,25 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Customer> getList() {
         return customerService.list();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public Customer create(@RequestBody Customer customer){
         return customerService.create(customer);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     public Customer update(@RequestParam String id, @RequestBody Customer object) {
         return customerService.update(object);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@RequestParam String id) {
         customerService.delete(id);
