@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @EnableEurekaClient
 @EnableAutoConfiguration
 @SpringBootApplication
