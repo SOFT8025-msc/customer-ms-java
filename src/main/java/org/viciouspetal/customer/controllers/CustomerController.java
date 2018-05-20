@@ -33,7 +33,7 @@ public class CustomerController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
     public void delete(@RequestParam String id) {
         customerService.delete(id);
     }

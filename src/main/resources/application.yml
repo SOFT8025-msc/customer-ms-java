@@ -1,7 +1,14 @@
+server:
+  port: 5000
+
 eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
+  instance:
+    hostname: ${DOMAIN_NAME:customer-ms-java.herokuapp.com}
+    nonSecurePort: 80
+  password: ${USER_PASSWORD:password}
 security:
   user:
     password: ${eureka.password}
@@ -9,12 +16,5 @@ security:
 ---
 spring:
   profiles: heroku
-eureka:
-  instance:
-    hostname: ${DOMAIN_NAME}
-    nonSecurePort: 80
-  password: ${USER_PASSWORD:password}
-  client:
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  application:
+#    name: customer-ms-java
