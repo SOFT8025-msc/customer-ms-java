@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL}/eureka/
+      defaultZone: ${EUREKA_URL:http://user:password@localhost:5000}/eureka/
 security:
   user:
     password: ${eureka.password}
@@ -14,3 +14,7 @@ eureka:
     hostname: ${DOMAIN_NAME}
     nonSecurePort: 80
   password: ${USER_PASSWORD:password}
+  client:
+    registerWithEureka: true
+    serviceUrl:
+          defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

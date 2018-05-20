@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-//@EnableDiscoveryClient
-@EnableEurekaClient
-@EnableAutoConfiguration
+@EnableDiscoveryClient
+//@EnableEurekaClient
+//@EnableAutoConfiguration
 @SpringBootApplication
 public class Application {
 
@@ -38,8 +38,8 @@ class ServiceInstanceRestController {
         return this.discoveryClient.getInstances(applicationName);
     }
 
-    @RequestMapping("/")
-    public String home() {
-        return "This is a trivial service that demonstrates how a Eureka Client can be registered with a Eureka Server on customer app.";
-    }
+//    @RequestMapping("/")
+//    public String home() {
+//        return "This is a trivial service that demonstrates how a Eureka Client can be registered with a Eureka Server on customer app.";
+//    }
 }
