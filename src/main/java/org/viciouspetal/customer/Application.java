@@ -2,6 +2,7 @@ package org.viciouspetal.customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @EnableDiscoveryClient
+@EnableAutoConfiguration
 @SpringBootApplication
 public class Application {
 
@@ -32,5 +34,10 @@ class ServiceInstanceRestController {
     public List<ServiceInstance> serviceInstancesByApplicationName(
             @PathVariable String applicationName) {
         return this.discoveryClient.getInstances(applicationName);
+    }
+
+    @RequestMapping("/")
+    public String home() {
+        return "This is a trivial service that demonstrates how a Eureka Client can be registered with a Eureka Server on customer app.";
     }
 }
