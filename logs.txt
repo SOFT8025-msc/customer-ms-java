@@ -2461,3 +2461,901 @@
 2018-05-20T21:12:47.051786+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
 2018-05-20T21:12:47.051788+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
 2018-05-20T21:12:47.051789+00:00 app[web.1]: 
+2018-05-20T21:13:17.115545+00:00 app[web.1]: 2018-05-20 21:13:17.115 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:13:17.115563+00:00 app[web.1]: 
+2018-05-20T21:13:17.115565+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:13:17.115567+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115569+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:13:17.115571+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:13:17.115573+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115575+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115577+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115579+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115580+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115582+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115583+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115585+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115587+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115588+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115590+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115591+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115593+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115595+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115597+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115598+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.115600+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.115601+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.115603+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.115604+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.115606+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.115608+00:00 app[web.1]: 
+2018-05-20T21:13:17.115715+00:00 app[web.1]: 2018-05-20 21:13:17.115  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:13:17.116053+00:00 app[web.1]: 2018-05-20 21:13:17.115 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:13:17.116055+00:00 app[web.1]: 
+2018-05-20T21:13:17.116057+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:13:17.116058+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116060+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116062+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116063+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116065+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116066+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116068+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:17.116069+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.116071+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.116072+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.116074+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.116075+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:13:17.116077+00:00 app[web.1]: 
+2018-05-20T21:13:47.189360+00:00 app[web.1]: 2018-05-20 21:13:47.189 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:13:47.189657+00:00 app[web.1]: 
+2018-05-20T21:13:47.189660+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:13:47.189662+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189664+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:13:47.189666+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:13:47.189667+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189670+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189671+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189673+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189675+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189694+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189695+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189697+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189699+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189700+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189702+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189703+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189705+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189706+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189708+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189710+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189712+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189713+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189715+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189716+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189718+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189720+00:00 app[web.1]: 
+2018-05-20T21:13:47.189730+00:00 app[web.1]: 2018-05-20 21:13:47.189  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:13:47.189732+00:00 app[web.1]: 2018-05-20 21:13:47.189 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:13:47.189733+00:00 app[web.1]: 
+2018-05-20T21:13:47.189735+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:13:47.189736+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189738+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189740+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189741+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189743+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189744+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189746+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:13:47.189747+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189749+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189750+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189752+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189754+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:13:47.189755+00:00 app[web.1]: 
+2018-05-20T21:14:17.268548+00:00 app[web.1]: 2018-05-20 21:14:17.268 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:14:17.268585+00:00 app[web.1]: 
+2018-05-20T21:14:17.268587+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:14:17.268589+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268591+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:14:17.268593+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:14:17.268598+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268605+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268607+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268609+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268610+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268612+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268614+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268616+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268617+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268619+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268620+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268622+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268624+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268625+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268627+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268628+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268630+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268632+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268633+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268635+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268637+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268638+00:00 app[web.1]: 
+2018-05-20T21:14:17.268646+00:00 app[web.1]: 2018-05-20 21:14:17.268  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:14:17.268876+00:00 app[web.1]: 2018-05-20 21:14:17.268 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:14:17.268879+00:00 app[web.1]: 
+2018-05-20T21:14:17.268881+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:14:17.268882+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268884+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268886+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268887+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268889+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268890+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268892+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:17.268893+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268895+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268897+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268898+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268900+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:14:17.268901+00:00 app[web.1]: 
+2018-05-20T21:14:47.330197+00:00 app[web.1]: 2018-05-20 21:14:47.329 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:14:47.330218+00:00 app[web.1]: 
+2018-05-20T21:14:47.330220+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:14:47.330222+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330224+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:14:47.330226+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:14:47.330228+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330230+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330232+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330233+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330235+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330237+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330239+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330241+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330243+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330245+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330246+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330248+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330250+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330252+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330254+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330256+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330258+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330260+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330262+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330263+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330265+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330267+00:00 app[web.1]: 
+2018-05-20T21:14:47.330297+00:00 app[web.1]: 2018-05-20 21:14:47.330  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:14:47.330664+00:00 app[web.1]: 2018-05-20 21:14:47.330 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:14:47.330667+00:00 app[web.1]: 
+2018-05-20T21:14:47.330669+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:14:47.330670+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330672+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330674+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330676+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330678+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330680+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330681+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:14:47.330683+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330685+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330686+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330688+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330690+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:14:47.330691+00:00 app[web.1]: 
+2018-05-20T21:15:17.424149+00:00 app[web.1]: 2018-05-20 21:15:17.423 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:15:17.424165+00:00 app[web.1]: 
+2018-05-20T21:15:17.424167+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:15:17.424169+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424170+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:15:17.424171+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:15:17.424172+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424174+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424175+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424176+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424178+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424179+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424180+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424181+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424182+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424183+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424184+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424185+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424186+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424187+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424189+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424190+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424191+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424193+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424194+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424195+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424197+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424198+00:00 app[web.1]: 
+2018-05-20T21:15:17.424286+00:00 app[web.1]: 2018-05-20 21:15:17.424  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:15:17.424592+00:00 app[web.1]: 2018-05-20 21:15:17.424 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:15:17.424594+00:00 app[web.1]: 
+2018-05-20T21:15:17.424596+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:15:17.424597+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424598+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424599+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424600+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424601+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424603+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424604+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:17.424605+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424607+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424608+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424609+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424611+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:15:17.424613+00:00 app[web.1]: 
+2018-05-20T21:15:47.500551+00:00 app[web.1]: 2018-05-20 21:15:47.500 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:15:47.500557+00:00 app[web.1]: 
+2018-05-20T21:15:47.500560+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:15:47.500562+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500563+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:15:47.500565+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:15:47.500567+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500569+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500571+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500572+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500574+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500576+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500578+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500579+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500581+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500583+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500584+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500586+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500588+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500590+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500592+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500593+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.500595+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.500597+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.500599+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.500600+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.500602+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.500603+00:00 app[web.1]: 
+2018-05-20T21:15:47.500611+00:00 app[web.1]: 2018-05-20 21:15:47.500  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:15:47.501515+00:00 app[web.1]: 2018-05-20 21:15:47.500 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:15:47.501518+00:00 app[web.1]: 
+2018-05-20T21:15:47.501521+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:15:47.501523+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501526+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501528+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501530+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501532+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501533+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501536+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:15:47.501537+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.501539+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.501541+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.501543+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.501545+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:15:47.501547+00:00 app[web.1]: 
+2018-05-20T21:16:14.525961+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/screen.css" host=customer-ms-java.herokuapp.com request_id=0560769e-a673-406f-9b28-e660adb567b6 fwd="78.17.154.217" dyno=web.1 connect=1ms service=158ms status=200 bytes=43832 protocol=https
+2018-05-20T21:16:14.520419+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js" host=customer-ms-java.herokuapp.com request_id=bef336c2-723d-4538-9632-176ace1c8153 fwd="78.17.154.217" dyno=web.1 connect=0ms service=150ms status=200 bytes=565 protocol=https
+2018-05-20T21:16:14.538184+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/reset.css" host=customer-ms-java.herokuapp.com request_id=b6606226-92d5-4f22-a741-3d39e9927145 fwd="78.17.154.217" dyno=web.1 connect=0ms service=168ms status=200 bytes=959 protocol=https
+2018-05-20T21:16:14.519305+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js" host=customer-ms-java.herokuapp.com request_id=874c26ae-f0be-425e-a8e4-0630640da82d fwd="78.17.154.217" dyno=web.1 connect=1ms service=148ms status=200 bytes=92234 protocol=https
+2018-05-20T21:16:14.519465+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js" host=customer-ms-java.herokuapp.com request_id=7b679e8f-cbb5-4b12-85a9-69cf5d13f5fc fwd="78.17.154.217" dyno=web.1 connect=1ms service=148ms status=200 bytes=549 protocol=https
+2018-05-20T21:16:14.678837+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js" host=customer-ms-java.herokuapp.com request_id=ec2a9348-78a3-49bc-b7a1-614706644624 fwd="78.17.154.217" dyno=web.1 connect=0ms service=53ms status=200 bytes=3719 protocol=https
+2018-05-20T21:16:14.684032+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js" host=customer-ms-java.herokuapp.com request_id=2bc61c11-8f9b-4f27-ac2e-aa3aaf996d5b fwd="78.17.154.217" dyno=web.1 connect=1ms service=53ms status=200 bytes=71706 protocol=https
+2018-05-20T21:16:14.527166+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/typography.css" host=customer-ms-java.herokuapp.com request_id=98ff2b6d-e876-4538-a318-5afa6c21790f fwd="78.17.154.217" dyno=web.1 connect=0ms service=158ms status=200 bytes=184 protocol=https
+2018-05-20T21:16:14.688095+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/lodash.min.js" host=customer-ms-java.herokuapp.com request_id=edf2b436-4139-4036-bc10-0581d24289cf fwd="78.17.154.217" dyno=web.1 connect=0ms service=48ms status=200 bytes=52096 protocol=https
+2018-05-20T21:16:14.666068+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js" host=customer-ms-java.herokuapp.com request_id=3a9965d1-71f4-4154-879c-86af4782597b fwd="78.17.154.217" dyno=web.1 connect=1ms service=41ms status=200 bytes=736 protocol=https
+2018-05-20T21:16:14.846037+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js" host=customer-ms-java.herokuapp.com request_id=4e9133e3-dd13-4697-b534-08f0607b80ec fwd="78.17.154.217" dyno=web.1 connect=2ms service=39ms status=200 bytes=11164 protocol=https
+2018-05-20T21:16:14.972855+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/swagger-ui.min.js" host=customer-ms-java.herokuapp.com request_id=041f6aac-900f-439a-9521-1e5a146f47c6 fwd="78.17.154.217" dyno=web.1 connect=1ms service=187ms status=200 bytes=453279 protocol=https
+2018-05-20T21:16:14.846140+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js" host=customer-ms-java.herokuapp.com request_id=eb929eb4-8a0b-4c9d-89b0-3ba30b0e8a10 fwd="78.17.154.217" dyno=web.1 connect=1ms service=21ms status=200 bytes=510 protocol=https
+2018-05-20T21:16:15.024318+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jsoneditor.min.js" host=customer-ms-java.herokuapp.com request_id=7505581f-874e-404e-a8fb-16e761ad9f7c fwd="78.17.154.217" dyno=web.1 connect=1ms service=78ms status=200 bytes=130038 protocol=https
+2018-05-20T21:16:14.935815+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/backbone-min.js" host=customer-ms-java.herokuapp.com request_id=e09e5072-74bb-4b6c-a19d-e392148724fc fwd="78.17.154.217" dyno=web.1 connect=2ms service=163ms status=200 bytes=19573 protocol=https
+2018-05-20T21:16:15.034545+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/swagger-oauth.js" host=customer-ms-java.herokuapp.com request_id=88b8fe26-1ba9-4fd4-9da4-a70c9b23df90 fwd="78.17.154.217" dyno=web.1 connect=1ms service=46ms status=200 bytes=7243 protocol=https
+2018-05-20T21:16:14.989743+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/marked.js" host=customer-ms-java.herokuapp.com request_id=9cbe46da-ccf9-4661-87ab-fc178f2f4f43 fwd="78.17.154.217" dyno=web.1 connect=1ms service=38ms status=200 bytes=15926 protocol=https
+2018-05-20T21:16:15.034700+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/springfox.js" host=customer-ms-java.herokuapp.com request_id=e09350d0-3594-428d-a9b7-227a4274ab18 fwd="78.17.154.217" dyno=web.1 connect=0ms service=37ms status=200 bytes=4676 protocol=https
+2018-05-20T21:16:15.302629+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/images/logo_small.png" host=customer-ms-java.herokuapp.com request_id=51c3e8ee-4274-4e59-a2d1-9a332bc9af69 fwd="78.17.154.217" dyno=web.1 connect=1ms service=29ms status=200 bytes=642 protocol=https
+2018-05-20T21:16:15.424658+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/print.css" host=customer-ms-java.herokuapp.com request_id=ee5c6d33-7907-466f-8b8d-04327f21be05 fwd="78.17.154.217" dyno=web.1 connect=1ms service=22ms status=200 bytes=41854 protocol=https
+2018-05-20T21:16:16.407548+00:00 heroku[router]: at=info method=GET path="/swagger-resources/configuration/ui" host=customer-ms-java.herokuapp.com request_id=7c904c9e-b860-4d30-a9aa-ef8a544552de fwd="78.17.154.217" dyno=web.1 connect=1ms service=36ms status=200 bytes=343 protocol=https
+2018-05-20T21:16:16.535230+00:00 heroku[router]: at=info method=GET path="/swagger-resources" host=customer-ms-java.herokuapp.com request_id=672da5bb-7477-477a-86f3-221e09fe0da5 fwd="78.17.154.217" dyno=web.1 connect=0ms service=18ms status=200 bytes=227 protocol=https
+2018-05-20T21:16:16.967565+00:00 heroku[router]: at=info method=GET path="/v2/api-docs" host=customer-ms-java.herokuapp.com request_id=721daec2-83f3-4689-87b0-b205651919d5 fwd="78.17.154.217" dyno=web.1 connect=0ms service=322ms status=200 bytes=13389 protocol=https
+2018-05-20T21:16:17.208743+00:00 heroku[router]: at=info method=GET path="/swagger-resources/configuration/security" host=customer-ms-java.herokuapp.com request_id=b72594eb-6310-413d-8725-3e9bdb29f28a fwd="78.17.154.217" dyno=web.1 connect=0ms service=21ms status=200 bytes=228 protocol=https
+2018-05-20T21:16:17.327321+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/images/throbber.gif" host=customer-ms-java.herokuapp.com request_id=764cccdc-4cb7-414a-8b08-1ad0a9ec562c fwd="78.17.154.217" dyno=web.1 connect=1ms service=18ms status=200 bytes=9445 protocol=https
+2018-05-20T21:16:17.600828+00:00 app[web.1]: 2018-05-20 21:16:17.600 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:16:17.600836+00:00 app[web.1]: 
+2018-05-20T21:16:17.600838+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:16:17.600844+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600846+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:16:17.600848+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:16:17.600851+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600853+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600854+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600856+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600858+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600859+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600861+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600862+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600864+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600866+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600867+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600869+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600870+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600872+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600874+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600876+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.600878+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.600879+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.600881+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.600882+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.600884+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.600886+00:00 app[web.1]: 
+2018-05-20T21:16:17.608182+00:00 app[web.1]: 2018-05-20 21:16:17.607  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:16:17.608669+00:00 app[web.1]: 2018-05-20 21:16:17.608 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:16:17.608672+00:00 app[web.1]: 
+2018-05-20T21:16:17.608674+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:16:17.608676+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608678+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608679+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608681+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608682+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608684+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608686+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:17.608687+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.608689+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.608691+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.608693+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.608695+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:16:17.608696+00:00 app[web.1]: 
+2018-05-20T21:16:44.407117+00:00 app[web.1]: 2018-05-20 21:16:44.406  INFO 4 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-05-20T21:16:47.664915+00:00 app[web.1]: 2018-05-20 21:16:47.664 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:16:47.664922+00:00 app[web.1]: 
+2018-05-20T21:16:47.664924+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:16:47.664926+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664928+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:16:47.664929+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:16:47.664932+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664934+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664935+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664937+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664939+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664940+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664942+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664958+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664960+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664962+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664963+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664965+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664967+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664969+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664970+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664972+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.664974+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.664975+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.664977+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.664978+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.664981+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.664982+00:00 app[web.1]: 
+2018-05-20T21:16:47.664989+00:00 app[web.1]: 2018-05-20 21:16:47.664  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:16:47.665310+00:00 app[web.1]: 2018-05-20 21:16:47.665 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:16:47.665312+00:00 app[web.1]: 
+2018-05-20T21:16:47.665313+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:16:47.665314+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665316+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665317+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665318+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665320+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665321+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665322+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:16:47.665324+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.665325+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.665327+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.665329+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.665330+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:16:47.665332+00:00 app[web.1]: 
+2018-05-20T21:16:51.000000+00:00 app[api]: Build started by user joanna.wojcik@mycit.ie
+2018-05-20T21:17:17.764704+00:00 app[web.1]: 2018-05-20 21:17:17.744 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:17:17.764716+00:00 app[web.1]: 
+2018-05-20T21:17:17.764718+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:17:17.764723+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764724+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:17:17.764725+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:17:17.764728+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764730+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764732+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764734+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764736+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764737+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764739+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764741+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764742+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764744+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764745+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764747+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764749+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764750+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764752+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764754+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.764755+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.764758+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.764759+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.764761+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.764762+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.764764+00:00 app[web.1]: 
+2018-05-20T21:17:17.764886+00:00 app[web.1]: 2018-05-20 21:17:17.764  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:17:17.765571+00:00 app[web.1]: 2018-05-20 21:17:17.765 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - was unable to send heartbeat!
+2018-05-20T21:17:17.765573+00:00 app[web.1]: 
+2018-05-20T21:17:17.765575+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:17:17.765577+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765579+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765580+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765582+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765583+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765585+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765586+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:17:17.765588+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.765589+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.765591+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.765593+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.765594+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:17:17.765595+00:00 app[web.1]: 
+2018-05-20T21:17:25.788094+00:00 heroku[web.1]: Restarting
+2018-05-20T21:17:25.791277+00:00 heroku[web.1]: State changed from up to starting
+2018-05-20T21:17:26.632447+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-05-20T21:17:26.649116+00:00 app[web.1]: 2018-05-20 21:17:26.648  INFO 4 --- [       Thread-6] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3234e239: startup date [Sun May 20 21:00:57 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1134affc
+2018-05-20T21:17:26.650852+00:00 app[web.1]: 2018-05-20 21:17:26.650  INFO 4 --- [       Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application customer-ms-java with eureka with status DOWN
+2018-05-20T21:17:26.651090+00:00 app[web.1]: 2018-05-20 21:17:26.650  WARN 4 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1526851046650, current=DOWN, previous=UP]
+2018-05-20T21:17:26.651564+00:00 app[web.1]: 2018-05-20 21:17:26.651  INFO 4 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986: registering service...
+2018-05-20T21:17:26.657271+00:00 app[web.1]: 2018-05-20 21:17:26.657  INFO 4 --- [       Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-05-20T21:17:26.663780+00:00 app[web.1]: 2018-05-20 21:17:26.663  INFO 4 --- [       Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-05-20T21:17:26.669379+00:00 app[web.1]: 2018-05-20 21:17:26.669  INFO 4 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-05-20T21:17:26.672562+00:00 app[web.1]: 2018-05-20 21:17:26.672  INFO 4 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - registration status: 204
+2018-05-20T21:17:26.675161+00:00 app[web.1]: 2018-05-20 21:17:26.674  INFO 4 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2018-05-20T21:17:26.685480+00:00 app[web.1]: 2018-05-20 21:17:26.685  INFO 4 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/a77d531d-161c-4d2d-8298-a91617d4a198.prvt.dyno.rt.heroku.com:customer-ms-java:15986 - deregister  status: 404
+2018-05-20T21:17:26.731070+00:00 app[web.1]: 2018-05-20 21:17:26.730  INFO 4 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2018-05-20T21:17:26.733428+00:00 app[web.1]: 2018-05-20 21:17:26.733  INFO 4 --- [       Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-05-20T21:17:26.735311+00:00 app[web.1]: 2018-05-20 21:17:26.734  INFO 4 --- [       Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-05-20T21:17:26.751514+00:00 app[web.1]: 2018-05-20 21:17:26.751  INFO 4 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-05-20T21:17:26.753717+00:00 app[web.1]: 2018-05-20 21:17:26.753  INFO 4 --- [       Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-05-20T21:17:26.768068+00:00 app[web.1]: 2018-05-20 21:17:26.767  INFO 4 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-05-20T21:17:26.776041+00:00 app[web.1]: 2018-05-20 21:17:26.775  INFO 4 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-05-20T21:17:25.580164+00:00 app[api]: Release v20 created by user joanna.wojcik@mycit.ie
+2018-05-20T21:17:26.956207+00:00 heroku[web.1]: Process exited with status 143
+2018-05-20T21:17:25.580164+00:00 app[api]: Deploy e5329d96 by user joanna.wojcik@mycit.ie
+2018-05-20T21:17:25.000000+00:00 app[api]: Build succeeded
+2018-05-20T21:17:29.555841+00:00 heroku[web.1]: Starting process with command `java -Dserver.port=38700 $JAVA_OPTS -jar build/libs/*.jar`
+2018-05-20T21:17:31.086281+00:00 app[web.1]: Create a Procfile to customize the command used to run this process: https://devcenter.heroku.com/articles/procfile
+2018-05-20T21:17:31.095849+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2018-05-20T21:17:31.098879+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -Dfile.encoding=UTF-8
+2018-05-20T21:17:32.902162+00:00 app[web.1]: 2018-05-20 21:17:32.898  INFO 4 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6debcae2: startup date [Sun May 20 21:17:32 UTC 2018]; root of context hierarchy
+2018-05-20T21:17:33.330866+00:00 app[web.1]: 2018-05-20 21:17:33.330  INFO 4 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-20T21:17:33.424643+00:00 app[web.1]: 2018-05-20 21:17:33.424  INFO 4 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cee965f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-20T21:17:33.755166+00:00 app[web.1]: 
+2018-05-20T21:17:33.755186+00:00 app[web.1]: .   ____          _            __ _ _
+2018-05-20T21:17:33.755199+00:00 app[web.1]: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2018-05-20T21:17:33.755232+00:00 app[web.1]: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2018-05-20T21:17:33.755260+00:00 app[web.1]: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2018-05-20T21:17:33.755289+00:00 app[web.1]: '  |____| .__|_| |_|_| |_\__, | / / / /
+2018-05-20T21:17:33.755317+00:00 app[web.1]: =========|_|==============|___/=/_/_/_/
+2018-05-20T21:17:33.755934+00:00 app[web.1]: :: Spring Boot ::        (v2.0.0.RELEASE)
+2018-05-20T21:17:33.755957+00:00 app[web.1]: 
+2018-05-20T21:17:33.770403+00:00 app[web.1]: 2018-05-20 21:17:33.770  INFO 4 --- [           main] org.viciouspetal.customer.Application    : No active profile set, falling back to default profiles: default
+2018-05-20T21:17:33.796454+00:00 app[web.1]: 2018-05-20 21:17:33.796  INFO 4 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ee52dcd: startup date [Sun May 20 21:17:33 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6debcae2
+2018-05-20T21:17:34.883413+00:00 app[web.1]: 2018-05-20 21:17:34.883  INFO 4 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2018-05-20T21:17:35.111943+00:00 app[web.1]: 2018-05-20 21:17:35.111  INFO 4 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ec3c5d72-d2fc-3aec-9a8d-3af95a481a21
+2018-05-20T21:17:35.170606+00:00 app[web.1]: 2018-05-20 21:17:35.170  INFO 4 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-20T21:17:35.374836+00:00 app[web.1]: 2018-05-20 21:17:35.374  INFO 4 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f0d49362] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-20T21:17:35.450687+00:00 app[web.1]: 2018-05-20 21:17:35.450  INFO 4 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cee965f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-20T21:17:35.924783+00:00 app[web.1]: 2018-05-20 21:17:35.924  INFO 4 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 38700 (http)
+2018-05-20T21:17:35.974455+00:00 app[web.1]: 2018-05-20 21:17:35.974  INFO 4 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-20T21:17:35.974686+00:00 app[web.1]: 2018-05-20 21:17:35.974  INFO 4 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-05-20T21:17:35.990588+00:00 app[web.1]: 2018-05-20 21:17:35.990  INFO 4 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/app/.jdk/jre/lib/amd64/server::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-05-20T21:17:36.097885+00:00 app[web.1]: 2018-05-20 21:17:36.097  INFO 4 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-20T21:17:36.098179+00:00 app[web.1]: 2018-05-20 21:17:36.098  INFO 4 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2301 ms
+2018-05-20T21:17:36.302161+00:00 app[web.1]: 2018-05-20 21:17:36.301  INFO 4 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-05-20T21:17:36.305165+00:00 app[web.1]: 2018-05-20 21:17:36.304  INFO 4 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2018-05-20T21:17:36.309899+00:00 app[web.1]: 2018-05-20 21:17:36.309  INFO 4 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-20T21:17:36.310488+00:00 app[web.1]: 2018-05-20 21:17:36.310  INFO 4 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-20T21:17:36.310614+00:00 app[web.1]: 2018-05-20 21:17:36.310  INFO 4 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-20T21:17:36.310754+00:00 app[web.1]: 2018-05-20 21:17:36.310  INFO 4 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-20T21:17:36.713667+00:00 app[web.1]: 2018-05-20 21:17:36.711  INFO 4 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-05-20T21:17:36.922728+00:00 app[web.1]: 2018-05-20 21:17:36.922  INFO 4 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-05-20T21:17:37.059387+00:00 app[web.1]: 2018-05-20 21:17:37.059  INFO 4 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-05-20T21:17:37.089332+00:00 app[web.1]: 2018-05-20 21:17:37.089  INFO 4 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2018-05-20T21:17:37.089336+00:00 app[web.1]: name: default
+2018-05-20T21:17:37.089338+00:00 app[web.1]: ...]
+2018-05-20T21:17:37.227591+00:00 app[web.1]: 2018-05-20 21:17:37.227  INFO 4 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.14.Final}
+2018-05-20T21:17:37.230192+00:00 app[web.1]: 2018-05-20 21:17:37.230  INFO 4 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-05-20T21:17:37.312654+00:00 app[web.1]: 2018-05-20 21:17:37.312  INFO 4 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-20T21:17:37.634429+00:00 app[web.1]: 2018-05-20 21:17:37.634  INFO 4 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-05-20T21:17:37.967540+00:00 app[web.1]: 2018-05-20 21:17:37.967  WARN 4 --- [           main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2018-05-20T21:17:38.434848+00:00 app[web.1]: 2018-05-20 21:17:38.434  INFO 4 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@c7ba306'
+2018-05-20T21:17:38.450085+00:00 app[web.1]: 2018-05-20 21:17:38.449  INFO 4 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-05-20T21:17:39.845488+00:00 app[web.1]: 2018-05-20 21:17:39.845  WARN 4 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-05-20T21:17:39.994755+00:00 app[web.1]: 2018-05-20 21:17:39.994  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shippingAddresses/list],methods=[GET]}" onto public java.util.List<org.viciouspetal.customer.model.ShippingAddress> org.viciouspetal.customer.controllers.ShippingAddressController.getList()
+2018-05-20T21:17:39.996294+00:00 app[web.1]: 2018-05-20 21:17:39.996  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shippingAddresses/update/{id}],methods=[POST]}" onto public org.viciouspetal.customer.model.ShippingAddress org.viciouspetal.customer.controllers.ShippingAddressController.update(java.lang.String,org.viciouspetal.customer.model.ShippingAddress)
+2018-05-20T21:17:39.996742+00:00 app[web.1]: 2018-05-20 21:17:39.996  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shippingAddresses/delete/{id}],methods=[DELETE]}" onto public void org.viciouspetal.customer.controllers.ShippingAddressController.delete(java.lang.String)
+2018-05-20T21:17:39.997214+00:00 app[web.1]: 2018-05-20 21:17:39.997  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shippingAddresses/create],methods=[POST]}" onto public org.viciouspetal.customer.model.ShippingAddress org.viciouspetal.customer.controllers.ShippingAddressController.create(org.viciouspetal.customer.model.ShippingAddress)
+2018-05-20T21:17:39.999968+00:00 app[web.1]: 2018-05-20 21:17:39.999  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/list],methods=[GET]}" onto public java.util.List<org.viciouspetal.customer.model.Customer> org.viciouspetal.customer.controllers.CustomerController.getList()
+2018-05-20T21:17:40.002369+00:00 app[web.1]: 2018-05-20 21:17:40.002  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/update/{id}],methods=[POST]}" onto public org.viciouspetal.customer.model.Customer org.viciouspetal.customer.controllers.CustomerController.update(java.lang.String,org.viciouspetal.customer.model.Customer)
+2018-05-20T21:17:40.002928+00:00 app[web.1]: 2018-05-20 21:17:40.002  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/delete],methods=[DELETE]}" onto public void org.viciouspetal.customer.controllers.CustomerController.delete(java.lang.String)
+2018-05-20T21:17:40.003609+00:00 app[web.1]: 2018-05-20 21:17:40.003  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/customers/create],methods=[POST]}" onto public org.viciouspetal.customer.model.Customer org.viciouspetal.customer.controllers.CustomerController.create(org.viciouspetal.customer.model.Customer)
+2018-05-20T21:17:40.004506+00:00 app[web.1]: 2018-05-20 21:17:40.004  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/service-instances/{applicationName}]}" onto public java.util.List<org.springframework.cloud.client.ServiceInstance> org.viciouspetal.customer.ServiceInstanceRestController.serviceInstancesByApplicationName(java.lang.String)
+2018-05-20T21:17:40.010794+00:00 app[web.1]: 2018-05-20 21:17:40.010  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-05-20T21:17:40.011518+00:00 app[web.1]: 2018-05-20 21:17:40.011  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-05-20T21:17:40.012232+00:00 app[web.1]: 2018-05-20 21:17:40.012  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-05-20T21:17:40.016449+00:00 app[web.1]: 2018-05-20 21:17:40.016  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-20T21:17:40.016994+00:00 app[web.1]: 2018-05-20 21:17:40.016  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-20T21:17:40.205805+00:00 app[web.1]: 2018-05-20 21:17:40.205  INFO 4 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-05-20T21:17:40.392285+00:00 app[web.1]: 2018-05-20 21:17:40.392  WARN 4 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-05-20T21:17:40.392389+00:00 app[web.1]: 2018-05-20 21:17:40.392  INFO 4 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-05-20T21:17:40.399929+00:00 app[web.1]: 2018-05-20 21:17:40.399  WARN 4 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-05-20T21:17:40.400001+00:00 app[web.1]: 2018-05-20 21:17:40.399  INFO 4 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-05-20T21:17:40.779751+00:00 app[web.1]: 2018-05-20 21:17:40.779  INFO 4 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ee52dcd: startup date [Sun May 20 21:17:33 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6debcae2
+2018-05-20T21:17:40.909906+00:00 app[web.1]: 2018-05-20 21:17:40.909  INFO 4 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-20T21:17:40.909979+00:00 app[web.1]: 2018-05-20 21:17:40.909  INFO 4 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-20T21:17:40.995462+00:00 app[web.1]: 2018-05-20 21:17:40.995  INFO 4 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-20T21:17:42.124085+00:00 app[web.1]: 2018-05-20 21:17:42.123  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-20T21:17:42.127430+00:00 app[web.1]: 2018-05-20 21:17:42.127  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-05-20T21:17:42.142312+00:00 app[web.1]: 2018-05-20 21:17:42.142  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-05-20T21:17:42.143143+00:00 app[web.1]: 2018-05-20 21:17:42.143  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-05-20T21:17:42.144410+00:00 app[web.1]: 2018-05-20 21:17:42.144  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-05-20T21:17:42.148382+00:00 app[web.1]: 2018-05-20 21:17:42.148  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-05-20T21:17:42.164168+00:00 app[web.1]: 2018-05-20 21:17:42.163  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-05-20T21:17:42.181568+00:00 app[web.1]: 2018-05-20 21:17:42.181  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6ee52dcd,type=ConfigurationPropertiesRebinder]
+2018-05-20T21:17:42.190316+00:00 app[web.1]: 2018-05-20 21:17:42.190  INFO 4 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-05-20T21:17:42.197651+00:00 app[web.1]: 2018-05-20 21:17:42.197  INFO 4 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-05-20T21:17:42.209525+00:00 app[web.1]: 2018-05-20 21:17:42.209  INFO 4 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-05-20T21:17:42.257673+00:00 app[web.1]: 2018-05-20 21:17:42.257  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-05-20T21:17:42.575262+00:00 app[web.1]: 2018-05-20 21:17:42.575  INFO 4 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-05-20T21:17:42.575361+00:00 app[web.1]: 2018-05-20 21:17:42.575  INFO 4 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-05-20T21:17:42.821433+00:00 app[web.1]: 2018-05-20 21:17:42.821  INFO 4 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-05-20T21:17:42.821499+00:00 app[web.1]: 2018-05-20 21:17:42.821  INFO 4 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-05-20T21:17:43.160941+00:00 app[web.1]: 2018-05-20 21:17:43.160  INFO 4 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-05-20T21:17:43.192467+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-05-20T21:17:43.192576+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-05-20T21:17:43.192659+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-05-20T21:17:43.192724+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-05-20T21:17:43.192825+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-05-20T21:17:43.192934+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-05-20T21:17:43.193046+00:00 app[web.1]: 2018-05-20 21:17:43.192  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-05-20T21:17:43.783698+00:00 app[web.1]: 2018-05-20 21:17:43.783  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-05-20T21:17:43.786675+00:00 app[web.1]: 2018-05-20 21:17:43.786  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-05-20T21:17:43.790475+00:00 app[web.1]: 2018-05-20 21:17:43.790  INFO 4 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-05-20T21:17:43.797831+00:00 app[web.1]: 2018-05-20 21:17:43.797  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1526851063795 with initial instances count: 11
+2018-05-20T21:17:43.809224+00:00 app[web.1]: 2018-05-20 21:17:43.809  INFO 4 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application customer-ms-java with eureka with status UP
+2018-05-20T21:17:43.810400+00:00 app[web.1]: 2018-05-20 21:17:43.810  INFO 4 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1526851063810, current=UP, previous=STARTING]
+2018-05-20T21:17:43.812501+00:00 app[web.1]: 2018-05-20 21:17:43.812  INFO 4 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700: registering service...
+2018-05-20T21:17:43.823490+00:00 app[web.1]: 2018-05-20 21:17:43.823  INFO 4 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-05-20T21:17:43.823702+00:00 app[web.1]: 2018-05-20 21:17:43.823  INFO 4 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-05-20T21:17:43.865474+00:00 app[web.1]: 2018-05-20 21:17:43.865  INFO 4 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-05-20T21:17:43.880835+00:00 app[web.1]: 2018-05-20 21:17:43.880  INFO 4 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - registration status: 204
+2018-05-20T21:17:43.919648+00:00 app[web.1]: 2018-05-20 21:17:43.919  INFO 4 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-05-20T21:17:44.339214+00:00 app[web.1]: 2018-05-20 21:17:44.338  INFO 4 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2018-05-20T21:17:44.344966+00:00 app[web.1]: 2018-05-20 21:17:44.344  INFO 4 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2018-05-20T21:17:44.351576+00:00 app[web.1]: 2018-05-20 21:17:44.350  INFO 4 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getListUsingGET_1
+2018-05-20T21:17:44.358521+00:00 app[web.1]: 2018-05-20 21:17:44.358  INFO 4 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2018-05-20T21:17:44.464218+00:00 app[web.1]: 2018-05-20 21:17:44.464  INFO 4 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 38700 (http) with context path ''
+2018-05-20T21:17:44.465912+00:00 app[web.1]: 2018-05-20 21:17:44.465  INFO 4 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 38700
+2018-05-20T21:17:44.471240+00:00 app[web.1]: 2018-05-20 21:17:44.470  INFO 4 --- [           main] org.viciouspetal.customer.Application    : Started Application in 12.435 seconds (JVM running for 13.371)
+2018-05-20T21:17:44.732249+00:00 heroku[web.1]: State changed from starting to up
+2018-05-20T21:18:13.871848+00:00 app[web.1]: 2018-05-20 21:18:13.871 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:18:13.871861+00:00 app[web.1]: 
+2018-05-20T21:18:13.871864+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:18:13.871869+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871871+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:18:13.871874+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:18:13.871879+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871883+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871885+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871886+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871888+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871889+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871891+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871893+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871894+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871896+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871897+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871899+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871900+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871902+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871904+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.871905+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.871907+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.871909+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.871910+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.871913+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.871914+00:00 app[web.1]: 
+2018-05-20T21:18:13.871923+00:00 app[web.1]: 2018-05-20 21:18:13.871  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:18:13.886677+00:00 app[web.1]: 2018-05-20 21:18:13.886 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:18:13.886681+00:00 app[web.1]: 
+2018-05-20T21:18:13.886683+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:18:13.886685+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886686+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:18:13.886688+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:18:13.886689+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886691+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886692+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886694+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886696+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886697+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886699+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886700+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886702+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886704+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886705+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886707+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886708+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886710+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886711+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886713+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.886714+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.886716+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.886718+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.886719+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.886721+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.886722+00:00 app[web.1]: 
+2018-05-20T21:18:13.886875+00:00 app[web.1]: 2018-05-20 21:18:13.886  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:18:13.887724+00:00 app[web.1]: 2018-05-20 21:18:13.887 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - was unable to send heartbeat!
+2018-05-20T21:18:13.887727+00:00 app[web.1]: 
+2018-05-20T21:18:13.887728+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:18:13.887730+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887732+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887734+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887735+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887737+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887738+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887740+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:13.887742+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.887743+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.887745+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.887746+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.887748+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:18:13.887749+00:00 app[web.1]: 
+2018-05-20T21:18:43.945465+00:00 app[web.1]: 2018-05-20 21:18:43.945 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:18:43.945485+00:00 app[web.1]: 
+2018-05-20T21:18:43.945488+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:18:43.945490+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945491+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:18:43.945493+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:18:43.945496+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945498+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945500+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945502+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945503+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945505+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945506+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945508+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945510+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945512+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945513+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945515+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945517+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945518+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945520+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945522+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945523+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945525+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945527+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945528+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945530+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945532+00:00 app[web.1]: 
+2018-05-20T21:18:43.945539+00:00 app[web.1]: 2018-05-20 21:18:43.945  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:18:43.945806+00:00 app[web.1]: 2018-05-20 21:18:43.945 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - was unable to send heartbeat!
+2018-05-20T21:18:43.945809+00:00 app[web.1]: 
+2018-05-20T21:18:43.945811+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:18:43.945813+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945815+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945816+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945818+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945820+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945822+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945823+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:18:43.945825+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945827+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945829+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945830+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945832+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:18:43.945834+00:00 app[web.1]: 
+2018-05-20T21:19:14.012277+00:00 app[web.1]: 2018-05-20 21:19:14.011 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:19:14.012291+00:00 app[web.1]: 
+2018-05-20T21:19:14.012293+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:19:14.012295+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012297+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:19:14.012298+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:19:14.012301+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012303+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012305+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012306+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012308+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012310+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012311+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012313+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012315+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012317+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012318+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012320+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012322+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012324+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012326+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012327+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012329+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012331+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012332+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012334+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012336+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012337+00:00 app[web.1]: 
+2018-05-20T21:19:14.012384+00:00 app[web.1]: 2018-05-20 21:19:14.012  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:19:14.012796+00:00 app[web.1]: 2018-05-20 21:19:14.012 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - was unable to send heartbeat!
+2018-05-20T21:19:14.012798+00:00 app[web.1]: 
+2018-05-20T21:19:14.012800+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:19:14.012801+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012802+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012804+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012805+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012806+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012807+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012809+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:14.012810+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012811+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012813+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012814+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012815+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:19:14.012816+00:00 app[web.1]: 
+2018-05-20T21:19:44.073043+00:00 app[web.1]: 2018-05-20 21:19:44.072 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:19:44.073057+00:00 app[web.1]: 
+2018-05-20T21:19:44.073060+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:19:44.073063+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073064+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:19:44.073066+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:19:44.073069+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073072+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073074+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073075+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073077+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073078+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073080+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073082+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073083+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073085+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073087+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073089+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073090+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073092+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073095+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073097+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073098+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073100+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073101+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073102+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073104+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073105+00:00 app[web.1]: 
+2018-05-20T21:19:44.073147+00:00 app[web.1]: 2018-05-20 21:19:44.073  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:19:44.073410+00:00 app[web.1]: 2018-05-20 21:19:44.073 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - was unable to send heartbeat!
+2018-05-20T21:19:44.073413+00:00 app[web.1]: 
+2018-05-20T21:19:44.073415+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:19:44.073417+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073419+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073421+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073422+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073424+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073426+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073428+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:19:44.073430+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073432+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073433+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073435+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073437+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:19:44.073439+00:00 app[web.1]: 
+2018-05-20T21:20:14.134325+00:00 app[web.1]: 2018-05-20 21:20:14.133 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:20:14.134338+00:00 app[web.1]: 
+2018-05-20T21:20:14.134341+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:20:14.134344+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134345+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:20:14.134347+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:20:14.134349+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134354+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134356+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134358+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134359+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134361+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134363+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134364+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134366+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134367+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134369+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134370+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134372+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134373+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134375+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134377+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134379+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134381+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134382+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134384+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134386+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134387+00:00 app[web.1]: 
+2018-05-20T21:20:14.134395+00:00 app[web.1]: 2018-05-20 21:20:14.134  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:20:14.134654+00:00 app[web.1]: 2018-05-20 21:20:14.134 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - was unable to send heartbeat!
+2018-05-20T21:20:14.134657+00:00 app[web.1]: 
+2018-05-20T21:20:14.134659+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:20:14.134661+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134663+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134665+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134666+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134668+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134669+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134671+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:14.134673+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134674+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134676+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134678+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134680+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:20:14.134681+00:00 app[web.1]: 
+2018-05-20T21:20:33.858857+00:00 app[web.1]: 2018-05-20 21:20:33.858  INFO 4 --- [io-38700-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-20T21:20:33.858937+00:00 app[web.1]: 2018-05-20 21:20:33.858  INFO 4 --- [io-38700-exec-5] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-20T21:20:33.886028+00:00 app[web.1]: 2018-05-20 21:20:33.885  INFO 4 --- [io-38700-exec-5] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-05-20T21:20:33.949749+00:00 heroku[router]: at=info method=GET path="/swagger-ui.html" host=customer-ms-java.herokuapp.com request_id=0aeea121-ed93-48ed-9c99-0f4b230888fc fwd="78.17.154.217" dyno=web.1 connect=0ms service=152ms status=200 bytes=3434 protocol=https
+2018-05-20T21:20:34.110503+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/typography.css" host=customer-ms-java.herokuapp.com request_id=1235ae29-5016-4f70-92f0-c610050ab84d fwd="78.17.154.217" dyno=web.1 connect=0ms service=14ms status=200 bytes=184 protocol=https
+2018-05-20T21:20:34.120459+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/reset.css" host=customer-ms-java.herokuapp.com request_id=aa9e0b9a-98c7-4aec-80cb-57af94fe504b fwd="78.17.154.217" dyno=web.1 connect=1ms service=7ms status=200 bytes=959 protocol=https
+2018-05-20T21:20:34.127995+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/screen.css" host=customer-ms-java.herokuapp.com request_id=99c1d35d-a54a-4118-b4ef-baec8a731621 fwd="78.17.154.217" dyno=web.1 connect=1ms service=10ms status=200 bytes=43832 protocol=https
+2018-05-20T21:20:34.230964+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js" host=customer-ms-java.herokuapp.com request_id=52503713-72a8-4ecf-92c8-788043682476 fwd="78.17.154.217" dyno=web.1 connect=0ms service=8ms status=200 bytes=92234 protocol=https
+2018-05-20T21:20:34.216156+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js" host=customer-ms-java.herokuapp.com request_id=b3a84be5-51d6-4dd1-a8e8-5f6cffe3ca8a fwd="78.17.154.217" dyno=web.1 connect=0ms service=5ms status=200 bytes=549 protocol=https
+2018-05-20T21:20:34.323596+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js" host=customer-ms-java.herokuapp.com request_id=d165dc3a-3755-4802-8339-37c13747b87a fwd="78.17.154.217" dyno=web.1 connect=0ms service=5ms status=200 bytes=565 protocol=https
+2018-05-20T21:20:34.436520+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js" host=customer-ms-java.herokuapp.com request_id=62c71ca1-8f0e-463f-992f-dc73158a2187 fwd="78.17.154.217" dyno=web.1 connect=0ms service=5ms status=200 bytes=736 protocol=https
+2018-05-20T21:20:34.550807+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js" host=customer-ms-java.herokuapp.com request_id=22a4bd0e-fe00-46d4-8b6e-721dfa9ffd4a fwd="78.17.154.217" dyno=web.1 connect=0ms service=4ms status=200 bytes=11164 protocol=https
+2018-05-20T21:20:34.437916+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js" host=customer-ms-java.herokuapp.com request_id=3af36e00-b7c4-4e07-815b-9bf7d438d661 fwd="78.17.154.217" dyno=web.1 connect=0ms service=7ms status=200 bytes=3719 protocol=https
+2018-05-20T21:20:34.435794+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js" host=customer-ms-java.herokuapp.com request_id=4be4f2fa-15dc-41a2-aa61-acdc32ce63fb fwd="78.17.154.217" dyno=web.1 connect=1ms service=7ms status=200 bytes=71706 protocol=https
+2018-05-20T21:20:34.442557+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/lodash.min.js" host=customer-ms-java.herokuapp.com request_id=3425b6d1-692e-44db-8217-602aa52d79b6 fwd="78.17.154.217" dyno=web.1 connect=0ms service=7ms status=200 bytes=52096 protocol=https
+2018-05-20T21:20:34.552477+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js" host=customer-ms-java.herokuapp.com request_id=39ad872c-d64d-4b4b-bda0-307db0052588 fwd="78.17.154.217" dyno=web.1 connect=0ms service=4ms status=200 bytes=510 protocol=https
+2018-05-20T21:20:34.446407+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/backbone-min.js" host=customer-ms-java.herokuapp.com request_id=0d1d8d91-e649-451a-aa57-0579db7b0492 fwd="78.17.154.217" dyno=web.1 connect=0ms service=4ms status=200 bytes=19573 protocol=https
+2018-05-20T21:20:34.557208+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/swagger-ui.min.js" host=customer-ms-java.herokuapp.com request_id=81e21b76-3956-4748-b5b7-f6b7e76a4cbd fwd="78.17.154.217" dyno=web.1 connect=0ms service=18ms status=200 bytes=453279 protocol=https
+2018-05-20T21:20:34.667276+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/marked.js" host=customer-ms-java.herokuapp.com request_id=50eeba25-1b5b-475e-a9bb-e5be908c12b9 fwd="78.17.154.217" dyno=web.1 connect=1ms service=6ms status=200 bytes=15926 protocol=https
+2018-05-20T21:20:34.669823+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/swagger-oauth.js" host=customer-ms-java.herokuapp.com request_id=e55bf096-bec3-4d22-9d46-db6b77dd4a6c fwd="78.17.154.217" dyno=web.1 connect=0ms service=5ms status=200 bytes=7243 protocol=https
+2018-05-20T21:20:34.662313+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/lib/jsoneditor.min.js" host=customer-ms-java.herokuapp.com request_id=332906c6-05ea-426f-a1ab-4593b6480ea5 fwd="78.17.154.217" dyno=web.1 connect=0ms service=8ms status=200 bytes=130038 protocol=https
+2018-05-20T21:20:34.671871+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/springfox.js" host=customer-ms-java.herokuapp.com request_id=64cb8eba-d1fa-416c-81d9-160ced640413 fwd="78.17.154.217" dyno=web.1 connect=0ms service=4ms status=200 bytes=4676 protocol=https
+2018-05-20T21:20:34.974359+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/images/logo_small.png" host=customer-ms-java.herokuapp.com request_id=0b2ef7f4-ad50-4da9-aac7-a74957af7103 fwd="78.17.154.217" dyno=web.1 connect=0ms service=4ms status=200 bytes=642 protocol=https
+2018-05-20T21:20:35.085717+00:00 heroku[router]: at=info method=GET path="/webjars/springfox-swagger-ui/css/print.css" host=customer-ms-java.herokuapp.com request_id=8927a5b7-62ec-458f-ae03-d7c06195d659 fwd="78.17.154.217" dyno=web.1 connect=0ms service=6ms status=200 bytes=41854 protocol=https
+2018-05-20T21:20:35.479519+00:00 heroku[router]: at=info method=GET path="/swagger-resources/configuration/ui" host=customer-ms-java.herokuapp.com request_id=5e9df79b-9d47-4c10-98c3-50b9255004e0 fwd="78.17.154.217" dyno=web.1 connect=0ms service=36ms status=200 bytes=343 protocol=https
+2018-05-20T21:20:35.603814+00:00 heroku[router]: at=info method=GET path="/swagger-resources" host=customer-ms-java.herokuapp.com request_id=8485e083-7891-4417-bbda-c7f939991b06 fwd="78.17.154.217" dyno=web.1 connect=0ms service=10ms status=200 bytes=227 protocol=https
+2018-05-20T21:20:35.895933+00:00 heroku[router]: at=info method=GET path="/v2/api-docs" host=customer-ms-java.herokuapp.com request_id=03814ac1-40f3-425c-9bda-cd131f839270 fwd="78.17.154.217" dyno=web.1 connect=0ms service=173ms status=200 bytes=13335 protocol=https
+2018-05-20T21:20:36.389447+00:00 heroku[router]: at=info method=GET path="/swagger-resources/configuration/security" host=customer-ms-java.herokuapp.com request_id=d63ab0e3-6f56-4c3e-8ba1-89015d80a64a fwd="78.17.154.217" dyno=web.1 connect=0ms service=20ms status=200 bytes=228 protocol=https
+2018-05-20T21:20:44.194944+00:00 app[web.1]: 2018-05-20 21:20:44.194 ERROR 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+2018-05-20T21:20:44.194962+00:00 app[web.1]: 
+2018-05-20T21:20:44.194965+00:00 app[web.1]: javax.ws.rs.WebApplicationException: null
+2018-05-20T21:20:44.194967+00:00 app[web.1]: at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194968+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:20:44.194970+00:00 app[web.1]: at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+2018-05-20T21:20:44.194973+00:00 app[web.1]: at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194975+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194977+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194979+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194981+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194983+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194984+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194986+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194988+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194989+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194991+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194993+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194994+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194996+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.194998+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195000+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195001+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195003+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195005+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195007+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195009+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195010+00:00 app[web.1]: 
+2018-05-20T21:20:44.195019+00:00 app[web.1]: 2018-05-20 21:20:44.194  WARN 4 --- [tbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: null
+2018-05-20T21:20:44.195391+00:00 app[web.1]: 2018-05-20 21:20:44.195 ERROR 4 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CUSTOMER-MS-JAVA/7ebb4ec1-421e-460d-ae49-0d88a95d2dde.prvt.dyno.rt.heroku.com:customer-ms-java:38700 - was unable to send heartbeat!
+2018-05-20T21:20:44.195393+00:00 app[web.1]: 
+2018-05-20T21:20:44.195394+00:00 app[web.1]: com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2018-05-20T21:20:44.195396+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195397+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195398+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195400+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195401+00:00 app[web.1]: at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195402+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:846) ~[eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195404+00:00 app[web.1]: at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1399) [eureka-client-1.8.8.jar!/:1.8.8]
+2018-05-20T21:20:44.195405+00:00 app[web.1]: at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195407+00:00 app[web.1]: at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195414+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195415+00:00 app[web.1]: at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195417+00:00 app[web.1]: at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171-heroku]
+2018-05-20T21:20:44.195418+00:00 app[web.1]: 
