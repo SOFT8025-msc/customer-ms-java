@@ -14,22 +14,26 @@ public class ShippingAddressController {
     @Autowired
     private ShippingAddressService shippingAddressService;
 
+    @CrossOrigin(origins = {"http://localhost:4200", "https://assignment-ui.cfapps.io/"})
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<ShippingAddress> getList() {
         return shippingAddressService.list();
     }
 
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public ShippingAddress create(@RequestBody ShippingAddress shippingAddress){
         return shippingAddressService.create(shippingAddress);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     public ShippingAddress update(@RequestParam String id, @RequestBody ShippingAddress shippingAddress) {
         return shippingAddressService.update(shippingAddress);
     }
 
+    @CrossOrigin(origins = {"http://localhost:4200", "https://assignment-ui.cfapps.io/"})
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@RequestParam String id) {
         shippingAddressService.delete(id);
