@@ -14,7 +14,7 @@ public class ShippingAddressController {
     @Autowired
     private ShippingAddressService shippingAddressService;
 
-    @CrossOrigin(origins = {"http://localhost:4200", "https://assignment-ui.cfapps.io/"})
+    @CrossOrigin(origins = "https://assignment-ui.cfapps.io")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<ShippingAddress> getList() {
         return shippingAddressService.list();
