@@ -20,13 +20,13 @@ public class CustomerController {
         return customerService.list();
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://assignment-ui.cfapps.io")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public Customer create(@RequestBody Customer customer){
         return customerService.create(customer);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://assignment-ui.cfapps.io")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     public Customer update(@PathVariable String id, @RequestBody Customer object) {
         return customerService.update(object);
