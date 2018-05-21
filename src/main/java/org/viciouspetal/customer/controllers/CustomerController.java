@@ -28,13 +28,13 @@ public class CustomerController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
-    public Customer update(@RequestParam String id, @RequestBody Customer object) {
+    public Customer update(@PathVariable String id, @RequestBody Customer object) {
         return customerService.update(object);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public void delete(@RequestParam String id) {
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable String id) {
         customerService.delete(id);
     }
 }

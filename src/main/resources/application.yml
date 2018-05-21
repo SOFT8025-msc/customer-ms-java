@@ -16,5 +16,3 @@ security:
 ---
 spring:
   profiles: heroku
-#  application:
-#    name: customer-ms-java
