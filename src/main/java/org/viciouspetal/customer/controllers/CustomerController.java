@@ -14,7 +14,7 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @CrossOrigin(origins = "/**")
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Customer> getList() {
         return customerService.list();
