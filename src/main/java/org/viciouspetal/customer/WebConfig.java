@@ -16,7 +16,7 @@ public class WebConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("https://assignment-ui.cfapps.io/", "http://localhost:4200"));
+        configuration.setAllowedOrigins(Arrays.asList("https://assignment-ui.cfapps.io", "http://localhost:4200"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST", "DELETE"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
