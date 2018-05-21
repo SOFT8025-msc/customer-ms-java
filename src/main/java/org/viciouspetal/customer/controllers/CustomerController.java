@@ -14,7 +14,7 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://assignment-ui.cfapps.io")
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Customer> getList() {
         return customerService.list();
@@ -32,7 +32,7 @@ public class CustomerController {
         return customerService.update(object);
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://assignment-ui.cfapps.io")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable String id) {
         customerService.delete(id);
